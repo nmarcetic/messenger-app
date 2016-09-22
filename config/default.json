@@ -1,0 +1,13 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "mongodb": "mongodb://localhost:27017/messengerApp",
+  "public": "../public/",
+  "auth": {
+    "token": {
+      "secret": "bS5878D+EDoxfwzi7IJbbOVBNOCwThEcDo8r5Zjp33uk+D26sSSG2QZEdksIfMU8sHxgyGCDdtWHpVOnuYfYNQ=="
+    },
+    "local": {},
+    "successRedirect": "/chat.html"
+  }
+}

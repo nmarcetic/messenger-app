@@ -1,0 +1,56 @@
+{
+  "name": "messenger-app",
+  "description": "This is a prototype of messenger application",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src/",
+  "keywords": [
+    "Messenger Application"
+  ],
+  "license": "MIT",
+  "repository": {},
+  "author": {},
+  "contributors": [],
+  "bugs": {},
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+  "scripts": {
+    "test": "npm run jshint && npm run mocha",
+    "jshint": "jshint src/. test/. --config",
+    "start": "node src/",
+    "mocha": "mocha test/ --recursive",
+    "build": "browserify -t [ babelify --presets [ react ] ] public/src/index.js -o public/build/app.js",
+    "watch": "watchify public/src/**/* -o public/build/app.js"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
+    "feathers": "^2.0.2",
+    "feathers-authentication": "^0.7.10",
+    "feathers-client": "^1.6.1",
+    "feathers-configuration": "^0.3.3",
+    "feathers-errors": "^2.4.0",
+    "feathers-hooks": "^1.5.7",
+    "feathers-mongoose": "^3.5.2",
+    "feathers-rest": "^1.5.0",
+    "feathers-socketio": "^1.4.1",
+    "moment": "^2.15.1",
+    "mongoose": "^4.6.1",
+    "passport": "^0.3.2",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "serve-favicon": "^2.3.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "jshint": "^2.9.3",
+    "mocha": "^3.0.2",
+    "request": "^2.75.0",
+    "watchify": "^3.7.0"
+  }
+}

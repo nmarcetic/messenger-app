@@ -17,9 +17,9 @@ You'll need the following software installed to get started.
   - [Git](http://git-scm.com/downloads): Use the installer for your OS.
     - Windows users can also try [Git for Windows](http://git-for-windows.github.io/).
   - [Bowserify](http://browserify.org/) : Run `npm install -g browserify watchify`
-    - Depending on how Node is configured on your machine, you may need to run `sudo npm install -g browserify` instead, if you get an error with the first command.
+    - Depending on how Node is configured on your machine, you may need to run `sudo npm install -g browserify watchify` instead, if you get an error with the first command.
 - [Yeoman](http://yeoman.io/generators/) Run `npm install -g yo  generator-feather`
-    - Depending on how Node is configured on your machine, you may need to run `sudo npm install -g yo  generator-feathe`
+    - Depending on how Node is configured on your machine, you may need to run `sudo npm install -g yo generator-feather`
 
 
 ## Get Started
@@ -51,7 +51,7 @@ This will run and assemble our  app.
  **Now go to `localhost:3030` in your browser to see it in action.**
 
 ## Docker
-The application is not yet fully containerized,  [docker-compose](https://docs.docker.com/compose/) is responsible for out composition, for now we just run MongoDB container to avoid installing MongoDB on local env.
+The application is not yet fully containerized,  [docker-compose](https://docs.docker.com/compose/) is responsible to spin our composition, for now we just run MongoDB container to avoid installing MongoDB on local env.
 ```bash
 docker-compose up -d
 ```
@@ -61,6 +61,9 @@ docker-compose up -d
 ## Client code
 Since we use power of browserify to split our client code in modules, like we do with nodejs, we must build client side code running the compiling process, without watching any files, use the `npm run build` command .
 You can check `public/build/` folder for `app.js` output (contains all our client side code with all bundles).
+
+
+**Note** When you change any client side file located under /public/src/ you must run `npm run build` command to apply the changes (e.g rebuild the code).
 
 
 #### Live reload coming soon

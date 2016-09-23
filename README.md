@@ -1,6 +1,7 @@
 # messenger-app
 Messenger application prototype builded with <3 and Javascript
 ## Our Stack
+- [Nodejs](https://nodejs.org/en/) and [Express](https://expressjs.com/)
 - [Feathers js](http://feathersjs.com/)
 - [MongoDB](https://www.mongodb.com/)
 - [React js](https://facebook.github.io/react/)
